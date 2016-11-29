@@ -1,0 +1,1054 @@
+!
+! MARTINI FORCE FIELD FOR CG SIMULATIONS
+! IN CHARMM FORM FOR LAMMPS
+!
+! TOPOLOGY FILE
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                               !
+! Francesca Collu e Enrico Spiga                !
+! ultima modifica 26-01-2009                    !
+!                                               !
+! Davide Alemani                                !
+! last modified 30-06-2009                      !
+! Added 1 molecule of water as                  !
+! W1 (atom type) in MASS                        !
+! WAT (residue type) in RESI                    !
+!                                               !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+
+31  1
+
+!
+!
+! template
+! standard backbones and special backbones
+MASS     1 P5p   57.05400 ! bead aminoacids
+MASS     2 Qdb   57.05400 ! amino-terminal aminoacids
+MASS     3 Qab   72.04600 ! carboxi-terminal aminoacids
+MASS     4 P5G   57.05400 ! glycine (only one bead)
+MASS     5 P4A   72.08800 ! alanine (only one bead)
+MASS     6 NaP   57.05400 ! backbone proline
+! side chains 
+MASS     7 C5C   47.09400 ! cysteine
+MASS     8 ACV   43.08600 ! valine
+MASS     9 ACL   57.11200 ! leucine and isoleucine
+MASS    10 C5M   75.14600 ! methionine
+MASS    11 P5N   58.06200 ! asparagine
+MASS    12 P4Q   72.08800 ! glutamine
+MASS    13 QaD   58.03600 ! aspartate
+MASS    14 QaE   73.07000 ! glutamate
+MASS    15 P1T   45.06000 ! threonine
+MASS    16 P1S   31.03400 ! serine
+MASS    17 C3p   42.07800 ! SC1 lysine
+MASS    18 QdK   31.0600  ! SC2 lysine
+MASS    19 N0p   57.09600 ! SC1 arginine
+MASS    20 QdR   44.06200 ! SC2 arginine
+MASS    21 SCp   26.03600 ! SC1 histidine and phenylalanine
+MASS    22 SPH   27.02800 ! SC2/SC3 histidine
+MASS    23 SCF   32.54500 ! SC2/SC3 phenylalanine, tyrosine and tryptophan
+MASS    24 SPY   43.04400 ! SC3 tyrosine
+MASS    25 SCW   38.04600 ! SC1 tryptophan
+MASS    26 SPW   27.02800 ! SC2 tryptophan  
+MASS    27 ACP   43.09
+! water
+MASS    28 P4    72.00000 ! water (4 in 1)
+MASS    29 BP4   72.00000 ! anti freeze water (4 in 1)
+MASS    30 W1    16.00000 ! 1 molecule of water
+
+!
+DECL -BN0  
+DECL +BN0
+! la riga di sotto serve?
+!DEFA FIRS NTER LAST CTER   
+AUTO ANGLES DIHE   
+
+
+! water (original from MARTINI)
+RESI W            0.00
+GROUP
+ATOM W    P4      0.0
+
+! anti freeze water	(original from MARTINI)
+RESI WF           0.00
+GROUP
+ATOM WF   BP4     0.0
+
+! water (1 molecule)
+RESI WAT           0.00
+GROUP
+ATOM W1   W1     0.0
+
+
+
+! ala
+RESI ALA          0.00
+GROUP   
+ATOM BN0  P4A     0.0   !     |
+                        !  HN-N
+                        !     |     HB1
+                        !     |    /
+                        !  HA-CA--CB-HB2
+                        !     |    \
+                        !     |     HB3
+                        !   O=C
+                        !     |
+                        !
+BOND BN0  +BN0
+
+! ala n-terminal
+RESI ALAN         1.00
+GROUP
+ATOM BN0  Qdb     1.0 
+                        !     H
+                        !     |
+                        !   H-N-H
+                        !     |     HB1
+                        !     |    /
+                        !  HA-CA--CB-HB2
+                        !     |    \
+                        !     |     HB3
+                        !   O=C
+                        !     |
+                        !
+BOND BN0  +BN0
+
+! ala c-terminal
+RESI ALAC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0
+                        !     |
+                        !   H-N-H
+                        !     |     HB1
+                        !     |    /
+                        !  HA-CA--CB-HB2
+                        !     |    \
+                        !     |     HB3
+                        !   O=C-O-
+                        !
+BOND BN0  +BN0
+
+! arg
+RESI ARG          1.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |                      HH11
+ATOM SC1   N0p    0.0   !  HN-N                       |
+ATOM SC2   QdR    1.0   !     |   HB1 HG1 HD1 HE     NH1-HH12
+                        !     |   |   |   |   |    //(+)  
+                        !  HA-CA--CB--CG--CD--NE--CZ
+                        !     |   |   |   |         \
+                        !     |   HB2 HG2 HD2        NH2-HH22
+                        !   O=C                       |
+                        !     |                      HH21
+BOND BN0  +BN0
+BOND BN0 SC1     
+BOND SC1 SC2     
+
+! arg n-terminal
+RESI ARGN         2.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |                      HH11
+ATOM SC1   N0p    0.0   !  HN-N                       |
+ATOM SC2   QdR    1.0   !     |   HB1 HG1 HD1 HE     NH1-HH12
+                        !     |   |   |   |   |    //(+)
+                        !  HA-CA--CB--CG--CD--NE--CZ
+                        !     |   |   |   |         \
+                        !     |   HB2 HG2 HD2        NH2-HH22
+                        !   O=C                       |
+                        !     |                      HH21
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+
+! arg c-terminal
+RESI ARGC         0.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |                      HH11
+ATOM SC1   N0p    0.0   !  HN-N                       |
+ATOM SC2   QdR    1.0   !     |   HB1 HG1 HD1 HE     NH1-HH12
+                        !     |   |   |   |   |    //(+)
+                        !  HA-CA--CB--CG--CD--NE--CZ
+                        !     |   |   |   |         \
+                        !     |   HB2 HG2 HD2        NH2-HH22
+                        !   O=C                       |
+                        !     |                      HH21
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+
+
+! asn
+RESI ASN          0.00
+GROUP   
+ATOM BN0  P5p      0.0  !     |       
+ATOM SC1  P5N      0.0  !  HN-N       
+                        !     |   HB1 OD1    HD21 (cis to OD1)
+                        !     |   |   ||    /
+                        !  HA-CA--CB--CG--ND2
+                        !     |   |         \
+                        !     |   HB2        HD22 (trans to OD1)
+                        !   O=C           
+                        !     |           
+BOND BN0  +BN0
+BOND BN0 SC1     
+
+! asn n-terminal
+RESI ASNN         1.00
+GROUP
+ATOM BN0  Qdb      1.0  !     |
+ATOM SC1  P5N      0.0  !  HN-N
+                        !     |   HB1 OD1    HD21 (cis to OD1)
+                        !     |   |   ||    /
+                        !  HA-CA--CB--CG--ND2
+                        !     |   |         \
+                        !     |   HB2        HD22 (trans to OD1)
+			!   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! asn c-terminal
+RESI ASNC        -1.00
+GROUP
+ATOM BN0  Qab     -1.0  !     |
+ATOM SC1  P5N      0.0  !  HN-N
+                        !     |   HB1 OD1    HD21 (cis to OD1)
+                        !     |   |   ||    /
+                        !  HA-CA--CB--CG--ND2
+                        !     |   |         \
+                        !     |   HB2        HD22 (trans to OD1)
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! asp
+RESI ASP         -1.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |       
+ATOM SC1   QaD   -1.0   !  HN-N       
+                        !     |   HB1   OD1
+                        !     |   |    //
+                        !  HA-CA--CB--CG
+                        !     |   |    \
+                        !     |   HB2   OD2(-)
+                        !   O=C           
+                        !     |           
+BOND BN0  +BN0
+BOND BN0 SC1     
+
+! asp n-terminal
+RESI ASPN         0.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |
+ATOM SC1   QaD   -1.0   !  HN-N
+                        !     |   HB1   OD1
+                        !     |   |    //
+                        !  HA-CA--CB--CG
+                        !     |   |    \
+                        !     |   HB2   OD2(-)
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! asp c-terminal
+RESI ASPC        -2.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |
+ATOM SC1   QaD   -1.0   !  HN-N
+     	   	 !     |   HB1   OD1
+		 !     |   |    //
+		 !  HA-CA--CB--CG
+		 !     |   |    \
+                 !     |   HB2   OD2(-)
+                 !   O=C
+                 !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+
+! asp neutral form
+RESI ASP0         0.0
+GROUP 
+ATOM BN0   P5p
+ATOM SC1   P3D
+
+
+
+! cys
+RESI CYS          0.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |       
+ATOM SC1   C5C    0.0   !  HN-N       
+                        !     |   HB1
+                        !     |   |  
+                        !  HA-CA--CB--SG
+                        !     |   |     \
+                        !     |   HB2    HG1
+                        !   O=C           
+                        !     |           
+BOND BN0  +BN0
+BOND BN0 SC1     
+
+! cys n-terminal
+RESI CYSN         1.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |
+ATOM SC1   C5C    0.0   !  HN-N
+     	   	  !     |   HB1
+                        !     |   |
+                        !  HA-CA--CB--SG
+                        !     |   |     \
+                        !     |   HB2    HG1
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! cys c-terminal
+RESI CYSC        -1.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |
+ATOM SC1   C5C    0.0   !  HN-N
+                  !     |   HB1
+                        !     |   |
+                        !  HA-CA--CB--SG
+                        !     |   |     \
+                        !     |   HB2    HG1
+			!   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! gln
+RESI GLN          0.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |          
+ATOM SC1  P4Q     0.0   !  HN-N          
+                        !     |   HB1 HG1 OE1   HE21 (cis to OE1)
+                        !     |   |   |   ||    /
+                        !  HA-CA--CB--CG--CD--NE2
+                        !     |   |   |         \
+                        !     |   HB2 HG2       HE22 (trans to OE1)
+                        !   O=C          
+                        !     |          
+BOND BN0  +BN0
+BOND BN0 SC1    
+
+! gln n-terminal
+RESI GLNN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |
+ATOM SC1  P4Q     0.0   !  HN-N
+                        !     |   HB1 HG1 OE1   HE21 (cis to OE1)
+                        !     |   |   |   ||    /
+                        !  HA-CA--CB--CG--CD--NE2
+                        !     |   |   |         \
+                        !     |   HB2 HG2       HE22 (trans to OE1)
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! gln c-terminal
+RESI GLNC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |
+ATOM SC1  P4Q     0.0   !  HN-N
+                        !     |   HB1 HG1 OE1   HE21 (cis to OE1)
+                        !     |   |   |   ||    /
+                        !  HA-CA--CB--CG--CD--NE2
+                        !     |   |   |         \
+                        !     |   HB2 HG2       HE22 (trans to OE1)
+                        !   O=C
+			!     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! glu
+RESI GLU         -1.00
+GROUP   
+ATOM BN0  P5p      0.0  !     |          
+ATOM SC1  QaE     -1.0  !  HN-N          
+                        !     |   HB1 HG1   OE1
+                        !     |   |   |    //
+                        !  HA-CA--CB--CG--CD
+                        !     |   |   |    \
+                        !     |   HB2 HG2   OE2(-)
+                        !   O=C          
+                        !     |          
+BOND BN0  +BN0
+BOND BN0 SC1    
+
+! glu n-terminal
+RESI GLUN         0.00
+GROUP
+ATOM BN0  Qdb      1.0  !     |
+ATOM SC1  QaE     -1.0  !  HN-N
+                        !     |   HB1 HG1   OE1
+                        !     |   |   |    //
+                        !  HA-CA--CB--CG--CD
+                        !     |   |   |    \
+                        !     |   HB2 HG2   OE2(-)
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! glu c-terminal
+RESI GLUC        -2.00
+GROUP
+ATOM BN0  Qab     -1.0  !     |
+ATOM SC1  QaE     -1.0  !  HN-N
+                        !     |   HB1 HG1   OE1
+                        !     |   |   |    //
+                        !  HA-CA--CB--CG--CD
+                        !     |   |   |    \
+                        !     |   HB2 HG2   OE2(-)
+                        !   O=C
+				!     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! gly
+RESI GLY          0.00
+GROUP   
+ATOM BN0  P5G     0.0   !     |
+                        !     N-H
+                        !     |  
+                        !     |  
+                        ! HA1-CA-HA2
+                        !     |  
+                        !     |  
+                        !     C=O
+                        !     |
+BOND BN0  +BN0
+
+! gly n-terminal
+RESI GLYN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |
+                        !     N-H
+                        !     |
+                        !     |
+                        ! HA1-CA-HA2
+                        !     |
+                        !     |
+                        !     C=O
+                        !     |
+BOND BN0  +BN0
+
+! gly c-terminal
+RESI GLYC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |
+                        !     N-H
+                        !     |
+                        !     |
+                        ! HA1-CA-HA2
+                        !     |
+                        !     |
+                        !     C=O
+		        !     |
+BOND BN0  +BN0
+
+! histidine (no difference between protonation state)
+RESI HSD          0.00  ! neutral HIS, proton on ND1
+GROUP   
+ATOM BN0   P5p    0.0   !     |          HD1    HE1
+ATOM SC1   SCp    0.0   !  HN-N           |     /
+ATOM SC2   SPH    0.0   !     |   HB1    ND1--CE1
+ATOM SC3   SPH    0.0   !     |   |     /      ||
+                        !  HA-CA--CB--CG       ||
+                        !     |   |     \\     ||
+                        !     |   HB2    CD2--NE2
+                        !   O=C           |
+                        !     |          HD2
+BOND BN0  +BN0
+BOND BN0  SC1    
+BOND SC1  SC2   
+BOND SC1  SC3   
+BOND SC2  SC3  
+
+! histidine n-terminal (no difference between protonation state)
+RESI HSDN         1.00  ! neutral HIS, proton on ND1
+GROUP
+ATOM BN0   Qdb    1.0   !     |          HD1    HE1
+ATOM SC1   SCp    0.0   !  HN-N           |     /
+ATOM SC2   SPH    0.0   !     |   HB1    ND1--CE1
+ATOM SC3   SPH    0.0   !     |   |     /      ||
+                        !  HA-CA--CB--CG       ||
+                        !     |   |     \\     ||
+                        !     |   HB2    CD2--NE2
+                        !   O=C           |
+                        !     |          HD2
+BOND BN0  +BN0
+BOND BN0  SC1
+BOND SC1  SC2
+BOND SC1  SC3
+BOND SC2  SC3
+
+! histidine c-terminal (no difference between protonation state)
+RESI HSDC        -1.00  ! neutral HIS, proton on ND1
+GROUP
+ATOM BN0   Qab   -1.0   !     |          HD1    HE1
+ATOM SC1   SCp    0.0   !  HN-N           |     /
+ATOM SC2   SPH    0.0   !     |   HB1    ND1--CE1
+ATOM SC3   SPH    0.0   !     |   |     /      ||
+                        !  HA-CA--CB--CG       ||
+                        !     |   |     \\     ||
+                        !     |   HB2    CD2--NE2
+                        !   O=C           |
+                        !     |          HD2
+BOND BN0  +BN0
+BOND BN0  SC1
+BOND SC1  SC2
+BOND SC1  SC3
+BOND SC2  SC3
+
+! ile
+RESI ILE          0.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |    HG21 HG22
+ATOM SC1  ACL     0.0   !  HN-N      | / 
+                        !     |     CG2--HG23
+                        !     |    /
+                        !  HA-CA--CB-HB    HD1
+                        !     |    \       /
+                        !     |     CG1--CD--HD2
+                        !   O=C    / \     \	 
+                        !     | HG11 HG12  HD3
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! ile n-terminal
+RESI ILEN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |    HG21 HG22
+ATOM SC1  ACL     0.0   !  HN-N      | /
+                        !     |     CG2--HG23
+                        !     |    /
+                        !  HA-CA--CB-HB    HD1
+                        !     |    \       /
+                        !     |     CG1--CD--HD2
+                        !   O=C    / \     \
+                        !     | HG11 HG12  HD3
+BOND BN0  +BN0
+BOND BN0 SC1
+      
+! ile c-terminal
+RESI ILEC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |    HG21 HG22
+ATOM SC1  ACL     0.0   !  HN-N      | /
+                        !     |     CG2--HG23
+                        !     |    /
+                        !  HA-CA--CB-HB    HD1
+                        !     |    \       /
+                        !     |     CG1--CD--HD2
+                        !   O=C    / \     \
+	        	!     | HG11 HG12  HD3
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! leu
+RESI LEU          0.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |        HD11 HD12
+ATOM SC1  ACL     0.0   !  HN-N          | /
+                        !     |   HB1   CD1--HD13
+                        !     |   |    /
+                        !  HA-CA--CB--CG-HG
+                        !     |   |    \ 
+                        !     |   HB2   CD2--HD23
+                        !   O=C          | \
+                        !     |        HD21 HD22
+BOND BN0  +BN0
+BOND BN0  SC1
+
+! leu n-terminal
+RESI LEUN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |        HD11 HD12
+ATOM SC1  ACL     0.0   !  HN-N          | /
+                        !     |   HB1   CD1--HD13
+                        !     |   |    /
+                        !  HA-CA--CB--CG-HG
+                        !     |   |    \
+                        !     |   HB2   CD2--HD23
+                        !   O=C          | \
+                        !     |        HD21 HD22
+BOND BN0  +BN0
+BOND BN0  SC1
+
+! leu c-terminal
+RESI LEUC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |        HD11 HD12
+ATOM SC1  ACL     0.0   !  HN-N          | /
+                        !     |   HB1   CD1--HD13
+                        !     |   |    /
+                        !  HA-CA--CB--CG-HG
+                        !     |   |    \
+                        !     |   HB2   CD2--HD23
+                        !   O=C          | \
+			    		 !     |        HD21 HD22
+BOND BN0  +BN0
+BOND BN0  SC1
+    
+! lys
+RESI LYS          1.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |                   
+ATOM SC1  C3p     0.0   !  HN-N                   
+ATOM SC2  QdK     1.0   !     |   HB1 HG1 HD1 HE1    HZ1
+                        !     |   |   |   |   |     /   
+                        !  HA-CA--CB--CG--CD--CE--NZ--HZ2
+                        !     |   |   |   |   |     \
+                        !     |   HB2 HG2 HD2 HE2    HZ3
+                        !   O=C                  
+                        !     |                  
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+
+! lys n-terminal
+RESI LYSN         2.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |
+ATOM SC1  C3p     0.0   !  HN-N
+ATOM SC2  QdK     1.0   !     |   HB1 HG1 HD1 HE1    HZ1
+                        !     |   |   |   |   |     /
+                        !  HA-CA--CB--CG--CD--CE--NZ--HZ2
+                        !     |   |   |   |   |     \
+                        !     |   HB2 HG2 HD2 HE2    HZ3
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+
+! lys c-terminal
+RESI LYSC         0.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |
+ATOM SC1  C3p     0.0   !  HN-N
+ATOM SC2  QdK     1.0   !     |   HB1 HG1 HD1 HE1    HZ1
+                        !     |   |   |   |   |     /
+                        !  HA-CA--CB--CG--CD--CE--NZ--HZ2
+                        !     |   |   |   |   |     \
+                        !     |   HB2 HG2 HD2 HE2    HZ3
+                        !   O=C
+				!     |
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+
+! met
+RESI MET          0.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |                   
+ATOM SC1  C5M     0.0   !  HN-N                   
+                        !     |   HB1 HG1     HE1 
+                        !     |   |   |       |   
+                        !  HA-CA--CB--CG--SD--CE--HE3
+                        !     |   |   |       |   
+                        !     |   HB2 HG2     HE2 
+                        !   O=C                  
+                        !     |                  
+BOND BN0  +BN0
+BOND BN0 SC1    
+
+! met n-terminal
+RESI METN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |
+ATOM SC1  C5M     0.0   !  HN-N
+                        !     |   HB1 HG1     HE1
+                        !     |   |   |       |
+                        !  HA-CA--CB--CG--SD--CE--HE3
+                        !     |   |   |       |
+                        !     |   HB2 HG2     HE2
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! met c-terminal
+RESI METC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |
+ATOM SC1  C5M     0.0   !  HN-N
+                        !     |   HB1 HG1     HE1
+                        !     |   |   |       |
+                        !  HA-CA--CB--CG--SD--CE--HE3
+                        !     |   |   |       |
+                        !     |   HB2 HG2     HE2
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! phe
+RESI PHE          0.00
+GROUP   
+ATOM BN0  P5p    0.0    !     |        HD1  HE1    
+ATOM SC1  SCp    0.0    !  HN-N         |    |   
+ATOM SC2  SCF    0.0    !     |   HB1  CD1--CE1
+ATOM SC3  SCF    0.0    !     |   |    //     \\
+                        !  HA-CA--CB--CG      CZ--HZ
+                        !     |   |    \  __  /
+                        !     |   HB2  CD2--CE2
+                        !   O=C         |    |  
+                        !     |        HD2  HE2   
+BOND BN0  +BN0
+BOND BN0 SC1     
+BOND SC1 SC2   
+BOND SC1 SC3   
+BOND SC2 SC3    
+
+! phe n-terminal
+RESI PHEN         1.00
+GROUP
+ATOM BN0  Qdb    1.0    !     |        HD1  HE1
+ATOM SC1  SCp    0.0    !  HN-N         |    |
+ATOM SC2  SCF    0.0    !     |   HB1  CD1--CE1
+ATOM SC3  SCF    0.0    !     |   |    //     \\
+                        !  HA-CA--CB--CG      CZ--HZ
+                        !     |   |    \  __  /
+                        !     |   HB2  CD2--CE2
+                        !   O=C         |    |
+                        !     |        HD2  HE2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC1 SC3
+BOND SC2 SC3
+
+! phe c-terminal
+RESI PHEC        -1.00
+GROUP
+ATOM BN0  Qdb   -1.0    !     |        HD1  HE1
+ATOM SC1  SCp    0.0    !  HN-N         |    |
+ATOM SC2  SCF    0.0    !     |   HB1  CD1--CE1
+ATOM SC3  SCF    0.0    !     |   |    //     \\
+                        !  HA-CA--CB--CG      CZ--HZ
+                        !     |   |    \  __  /
+                        !     |   HB2  CD2--CE2
+                        !   O=C         |    |
+	    		!     |        HD2  HE2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC1 SC3
+BOND SC2 SC3
+
+! pro
+RESI PRO          0.00
+GROUP                   !       HD1 HD2
+ATOM BN0  NaP     0.0   !     |   \ /
+ATOM SC1  ACP     0.0   !     N---CD   HG1  ATOM CA   CP1     0.02
+                        !     |     \  /
+                        !     |      CG
+                        !     |     /  \
+                        !  HA-CA--CB   HG2
+                        !     |   / \
+                        !     | HB1 HB2
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1    
+
+! pro n-terminal
+RESI PRON         1.00
+GROUP                   !       HD1 HD2
+ATOM BN0  Qdb     1.0   !     |   \ /
+ATOM SC1  ACP     0.0   !     N---CD   HG1  ATOM CA   CP1     0.02
+                        !     |     \  /
+                        !     |      CG
+                        !     |     /  \
+                        !  HA-CA--CB   HG2
+                        !     |   / \
+                        !     | HB1 HB2
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! pro c-terminal
+RESI PROC        -1.00
+GROUP                   !       HD1 HD2
+ATOM BN0  Qab    -1.0   !     |   \ /
+ATOM SC1  ACP     0.0   !     N---CD   HG1  ATOM CA   CP1     0.02
+                        !     |     \  /
+                        !     |      CG
+                        !     |     /  \
+                        !  HA-CA--CB   HG2
+			!     |   / \
+                        !     | HB1 HB2
+		        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! ser
+RESI SER          0.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |       
+ATOM SC1   P1S    0.0   !  HN-N       
+                        !     |   HB1
+                        !     |   |  
+                        !  HA-CA--CB--OG
+                        !     |   |     \
+                        !     |   HB2    HG1
+                        !   O=C           
+                        !     |           
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! ser n-terminal
+RESI SERN         1.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |
+ATOM SC1   P1S    0.0   !  HN-N
+                        !     |   HB1
+                        !     |   |
+                        !  HA-CA--CB--OG
+                        !     |   |     \
+                        !     |   HB2    HG1
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+    
+! ser c-terminal
+RESI SERC        -1.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |
+ATOM SC1   P1S    0.0   !  HN-N
+                        !     |   HB1
+                        !     |   |
+                        !  HA-CA--CB--OG
+                        !     |   |     \
+                        !     |   HB2    HG1
+                        !   O=C
+                        !     |
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! thr
+RESI THR          0.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |  
+ATOM SC1   P1T    0.0   !  HN-N  
+                        !     |     OG1--HG1
+                        !     |    /
+                        !  HA-CA--CB-HB  
+                        !     |    \     
+                        !     |     CG2--HG21
+                        !   O=C    / \    
+                        !     | HG21 HG22 
+BOND BN0  +BN0
+BOND  BN0  SC1
+
+! thr n-terminal
+RESI THRN         1.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |
+ATOM SC1   P1T    0.0   !  HN-N
+                        !     |     OG1--HG1
+                        !     |    /
+                        !  HA-CA--CB-HB
+                        !     |    \
+                        !     |     CG2--HG21
+                        !   O=C    / \
+                        !     | HG21 HG22
+BOND BN0  +BN0
+BOND  BN0  SC1
+
+! thr c-terminal
+RESI THRC        -1.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |
+ATOM SC1   P1T    0.0   !  HN-N
+                        !     |     OG1--HG1
+                        !     |    /
+                        !  HA-CA--CB-HB
+                        !     |    \
+                        !     |     CG2--HG21
+                        !   O=C    / \
+			    	   !     | HG21 HG22
+BOND BN0  +BN0
+BOND  BN0  SC1
+   
+! trp
+RESI TRP          0.00
+GROUP   
+ATOM BN0   P5p     0.0  !     |                  HE3
+ATOM SC1   SCW     0.0  !  HN-N                   |
+ATOM SC2   SPW     0.0  !     |   HB1            CE3
+ATOM SC3   SCF     0.0  !     |   |             /  \\
+ATOM SC4   SCF     0.0  !  HA-CA--CB---CG-----CD2   CZ3-HZ3
+                        !     |   |    ||     ||     |
+                        !     |   HB2  CD1    CE2   CH2-HH2
+                        !   O=C       /   \   / \  //
+                        !     |     HD1    NE1   CZ2
+                        !                   |     |
+                        !                  HE1   HZ2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC2 SC3
+BOND SC1 SC3
+BOND SC2 SC4
+BOND SC3 SC4
+
+! trp n-terminal
+RESI TRPN         1.00
+GROUP
+ATOM BN0   Qdb     1.0  !     |                  HE3
+ATOM SC1   SCW     0.0  !  HN-N                   |
+ATOM SC2   SPW     0.0  !     |   HB1            CE3
+ATOM SC3   SCF     0.0  !     |   |             /  \\
+ATOM SC4   SCF     0.0  !  HA-CA--CB---CG-----CD2   CZ3-HZ3
+                        !     |   |    ||     ||     |
+                        !     |   HB2  CD1    CE2   CH2-HH2
+                        !   O=C       /   \   / \  //
+                        !     |     HD1    NE1   CZ2
+                        !                   |     |
+                        !                  HE1   HZ2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC2 SC3
+BOND SC1 SC3
+BOND SC2 SC4
+BOND SC3 SC4
+
+! trp c-terminal
+RESI TRPC        -1.00
+GROUP
+ATOM BN0   Qab    -1.0  !     |                  HE3
+ATOM SC1   SCW     0.0  !  HN-N                   |
+ATOM SC2   SPW     0.0  !     |   HB1            CE3
+ATOM SC3   SCF     0.0  !     |   |             /  \\
+ATOM SC4   SCF     0.0  !  HA-CA--CB---CG-----CD2   CZ3-HZ3
+                        !     |   |    ||     ||     |
+                        !     |   HB2  CD1    CE2   CH2-HH2
+                        !   O=C       /   \   / \  //
+                        !     |     HD1    NE1   CZ2
+                        !                   |     |
+                        !                  HE1   HZ2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC2 SC3
+BOND SC1 SC3
+BOND SC2 SC4
+BOND SC3 SC4
+
+! tyr
+RESI TYR          0.00
+GROUP   
+ATOM BN0   P5p    0.0   !     |        HD1  HE1    
+ATOM SC1   SCF    0.0   !  HN-N         |    |   
+ATOM SC2   SCF    0.0   !     |   HB1  CD1--CE1
+ATOM SC3   SPY    0.0   !     |   |   //      \\
+                        !  HA-CA--CB--CG      CZ--OH
+                        !     |   |    \  __  /     \
+                        !     |   HB2  CD2--CE2     HH
+                        !   O=C         |    |  
+                        !     |        HD2  HE2   
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC1 SC3
+BOND SC2 SC3
+
+! tyr n-terminal
+RESI TYRN         1.00
+GROUP
+ATOM BN0   Qdb    1.0   !     |        HD1  HE1
+ATOM SC1   SCF    0.0   !  HN-N         |    |
+ATOM SC2   SCF    0.0   !     |   HB1  CD1--CE1
+ATOM SC3   SPY    0.0   !     |   |   //      \\
+                        !  HA-CA--CB--CG      CZ--OH
+                        !     |   |    \  __  /     \
+                        !     |   HB2  CD2--CE2     HH
+                        !   O=C         |    |
+			    		!     |        HD2  HE2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC1 SC3
+BOND SC2 SC3
+
+! tyr c-terminal
+RESI TYRC        -1.00
+GROUP
+ATOM BN0   Qab   -1.0   !     |        HD1  HE1
+ATOM SC1   SCF    0.0   !  HN-N         |    |
+ATOM SC2   SCF    0.0   !     |   HB1  CD1--CE1
+ATOM SC3   SPY    0.0   !     |   |   //      \\
+                        !  HA-CA--CB--CG      CZ--OH
+                        !     |   |    \  __  /     \
+                        !     |   HB2  CD2--CE2     HH
+                        !   O=C         |    |
+                                        !     |        HD2  HE2
+BOND BN0  +BN0
+BOND BN0 SC1
+BOND SC1 SC2
+BOND SC1 SC3
+BOND SC2 SC3
+
+! val
+RESI VAL          0.00
+GROUP   
+ATOM BN0  P5p     0.0   !     |    HG11 HG12
+ATOM SC1  ACV     0.0   !  HN-N      | / 
+                        !     |     CG1--HG13
+                        !     |    /
+                        !  HA-CA--CB-HB  
+                        !     |    \     
+                        !     |     CG2--HG21
+                        !   O=C    / \   
+                        !     | HG21 HG22
+BOND BN0  +BN0
+BOND BN0 SC1 
+
+! val n-terminal
+RESI VALN         1.00
+GROUP
+ATOM BN0  Qdb     1.0   !     |    HG11 HG12
+ATOM SC1  ACV     0.0   !  HN-N      | /
+                        !     |     CG1--HG13
+                        !     |    /
+                        !  HA-CA--CB-HB
+                        !     |    \
+                        !     |     CG2--HG21
+                        !   O=C    / \
+                        !     | HG21 HG22
+BOND BN0  +BN0
+BOND BN0 SC1
+
+! val c-terminal
+RESI VALC        -1.00
+GROUP
+ATOM BN0  Qab    -1.0   !     |    HG11 HG12
+ATOM SC1  ACV     0.0   !  HN-N      | /
+                        !     |     CG1--HG13
+                        !     |    /
+                        !  HA-CA--CB-HB
+                        !     |    \
+                        !     |     CG2--HG21
+                        !   O=C    / \
+			    	   !     | HG21 HG22
+BOND BN0  +BN0
+BOND BN0 SC1
+
+
+
+END
+

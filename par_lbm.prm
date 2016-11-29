@@ -1,0 +1,847 @@
+>> LBM-CG Parameter File for Proteins version 1.1                     <<
+>> Mapping Martini CG-FF like                                         <<
+>> Backbone part obtained to mantain secondary structure elements     <<
+>> Bonded part obtained from Boltzmann inversion of UA-FF simulations <<
+>> Non-bonded part extracted from Martini CG-FF                       <<
+*>>>>>>>>>>>>>>>>>>>>>>   September, 2011   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+* All comments to ADM jr. via the LBM EPFL web site
+*               parameter set discussion forum
+*
+* modified by Enrico 09-09-2011
+
+
+BONDS
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!atom type Kb          b0
+!
+! backbone
+BUN   BU     50.00      3.81    !
+BUN   BUC    50.00      3.81    !
+BUN   BA     50.00      3.81    !
+BUN   BAC    50.00      3.81    !
+BU    BU     50.00      3.81    !
+BU    BUC    50.00      3.81    !
+BUC   BU     50.00      3.81    !
+BU    BA     50.00      3.81    !
+BU    BAC    50.00      3.81    !
+BAN   BA     50.00      3.81    !
+BA    BA     50.00      3.81    !
+BA    BAC    50.00      3.81    !
+!
+! arginine
+BUN   SR1    30.53      3.25   ! fit Boltzmann inversion sim UA
+BU    SR1    30.53      3.25   ! fit Boltzmann inversion sim UA
+BUC   SR1    30.53      3.25   ! fit Boltzmann inversion sim UA
+SR1   SR2    16.50      3.38   ! fit Boltzmann inversion sim UA
+!
+! asparagine
+BUN   SN     50.00      2.60   ! fit Boltzmann inversion sim UA
+BU    SN     50.00      2.60   ! fit Boltzmann inversion sim UA
+BUC   SN     50.00      2.60   ! fit Boltzmann inversion sim UA
+!
+! aspartate
+BUN   SD     50.00      2.58   ! fit Boltzmann inversion sim UA
+BU    SD     50.00      2.58   ! fit Boltzmann inversion sim UA
+BUC   SD     50.00      2.58   ! fit Boltzmann inversion sim UA
+!
+! cysteine
+BUN   SC1    50.00      2.42   ! fit Boltzmann inversion sim UA
+BU    SC1    50.00      2.42   ! fit Boltzmann inversion sim UA
+BUC   SC1    50.00      2.42   ! fit Boltzmann inversion sim UA
+BUN   SC2    50.00      2.42   ! fit Boltzmann inversion sim UA
+BU    SC2    50.00      2.42   ! fit Boltzmann inversion sim UA
+BUC   SC2    50.00      2.42   ! fit Boltzmann inversion sim UA
+SC2   SC2    50.00      2.4    ! trial
+SC1   SC1    50.00      2.4    ! trial
+!
+! glutamate
+BUN   SE     50.00      3.47   ! fit Boltzmann inversion sim UA
+BU    SE     50.00      3.47   ! fit Boltzmann inversion sim UA
+BUC   SE     50.00      3.47   ! fit Boltzmann inversion sim UA
+!
+! glutamine
+BUN   SQ     50.00      3.5    ! fit Boltzmann inversion sim UA
+BU    SQ     50.00      3.5    ! fit Boltzmann inversion sim UA
+BUC   SQ     50.00      3.5    ! fit Boltzmann inversion sim UA
+!
+! histidine
+BUN   SH1    50.00      1.92   ! fit Boltzmann inversion sim UA 
+BU    SH1    50.00      1.92   ! fit Boltzmann inversion sim UA
+BUC   SH1    50.00      1.92   ! fit Boltzmann inversion sim UA
+SH1   SH2    50.00      2.42   ! fit Boltzmann inversion sim UA
+SH2   SH2    50.00      1.75   ! fit Boltzmann inversion sim UA
+!
+! isoleucine
+BUN   SI     10.00      2.22   ! fit Boltzmann inversion sim UA
+BU    SI     10.00      2.22   ! fit Boltzmann inversion sim UA
+BUC   SI     10.00      2.22   ! fit Boltzmann inversion sim UA
+!
+! leucine
+BUN   SL     50.00      2.64   ! fit Boltzmann inversion sim UA
+BU    SL     50.00      2.64   ! fit Boltzmann inversion sim UA
+BUC   SL     50.00      2.64   ! fit Boltzmann inversion sim UA
+!
+! lysine
+BUN   SK1    50.00      2.60   ! fit Boltzmann inversion sim UA
+BU    SK1    50.00      2.60   ! fit Boltzmann inversion sim UA
+BUC   SK1    50.00      2.60   ! fit Boltzmann inversion sim UA
+SK1   SK2    50.00      3.25   ! fit Boltzmann inversion sim UA
+!
+! methionine
+BUN   SM      2.00      3.20   ! fit Boltzmann inversion sim UA
+BU    SM      2.00      3.20   ! fit Boltzmann inversion sim UA
+BUC   SM      2.00      3.20   ! fit Boltzmann inversion sim UA
+!
+! phenylalanine
+BUN   SF1    50.00      1.97   ! fit Boltzmann inversion sim UA
+BU    SF1    50.00      1.97   ! fit Boltzmann inversion sim UA
+BUC   SF1    50.00      1.97   ! fit Boltzmann inversion sim UA
+SF1   SF2    50.00      2.57   ! fit Boltzmann inversion sim UA
+SF2   SF2    50.00      2.31   ! fit Boltzmann inversion sim UA
+!
+! proline
+BUN   SP     50.00      1.86   ! fit Boltzmann inversion sim UA
+BU    SP     50.00      1.86   ! fit Boltzmann inversion sim UA
+BUC   SP     50.00      1.86   ! fit Boltzmann inversion sim UA
+!
+! serine
+BUN   SS     50.00      2.0    ! fit Boltzmann inversion sim UA
+BU    SS     50.00      2.0    ! fit Boltzmann inversion sim UA
+BUC   SS     50.00      2.0    ! fit Boltzmann inversion sim UA
+!
+! threonine
+BUN   ST     50.00      1.97   ! fit Boltzmann inversion sim UA
+BU    ST     50.00      1.97   ! fit Boltzmann inversion sim UA
+BUC   ST     50.00      1.97   ! fit Boltzmann inversion sim UA
+!
+! tryptophan
+BUN   SW1    50.00      1.96   ! fit Boltzmann inversion sim UA 
+BU    SW1    50.00      1.96   ! fit Boltzmann inversion sim UA
+BUC   SW1    50.00      1.96   ! fit Boltzmann inversion sim UA
+!
+SW1   SW2    50.00      2.42   ! fit Boltzmann inversion sim UA
+SW1   SW3    50.00      2.96   ! fit Boltzmann inversion sim UA
+SW2   SW3    50.00      2.96   ! fit Boltzmann inversion sim UA
+SW3   SW3    50.00      1.95   ! fit Boltzmann inversion sim UA
+!
+! tyrosine
+BUN   SY1    50.00      1.97   ! fit Boltzmann inversion sim UA
+BU    SY1    50.00      1.97   ! fit Boltzmann inversion sim UA
+BUC   SY1    50.00      1.97   ! fit Boltzmann inversion sim UA
+SY1   SY2    82.00      2.74   ! fit Boltzmann inversion sim UA
+SY2   SY2   100.00      2.23   ! fit Boltzmann inversion sim UA
+!
+! valine
+BUN   SV     50.00      1.97   ! fit Boltzmann inversion sim UA
+BU    SV     50.00      1.97   ! fit Boltzmann inversion sim UA
+BUC   SV     50.00      1.97   ! fit Boltzmann inversion sim UA
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!V(Urey-Bradley) = Kub(S - S0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+!atom types     Theta0    Ktheta1   Ktheta2   Ktheta3
+! backbone
+BUN  BU   BU    132       256.2223  725.0207  512.8895  ! symmetric barrier of 8 kcal/mol with minima in alpha and beta
+BUN  BU   BA    132       256.2223  725.0207  512.8895
+BU   BU   BU    132       256.2223  725.0207  512.8895
+BU   BU   BUC   132       256.2223  725.0207  512.8895
+BU   BA   BU    132       256.2223  725.0207  512.8895
+BU   BA   BA    132       256.2223  725.0207  512.8895
+BU   BU   BA    132       256.2223  725.0207  512.8895
+BU   BA   BUC   132       256.2223  725.0207  512.8895
+BU   BA   BAC   132       256.2223  725.0207  512.8895
+BU   BU   BAC   132       256.2223  725.0207  512.8895
+BA   BA   BA    132       256.2223  725.0207  512.8895
+BA   BA   BU    132       256.2223  725.0207  512.8895
+BA   BU   BU    132       256.2223  725.0207  512.8895
+BA   BU   BA    132       256.2223  725.0207  512.8895
+BA   BA   BU    132       256.2223  725.0207  512.8895
+BA   BA   BAC   132       256.2223  725.0207  512.8895
+BA   BA   BUC   132       256.2223  725.0207  512.8895
+BA   BU   BUC   132       256.2223  725.0207  512.8895
+BA   BU   BAC   132       256.2223  725.0207  512.8895
+BA   BA   BUC   132       256.2223  725.0207  512.8895
+BAN  BA   BA    132       256.2223  725.0207  512.8895
+!
+! arginine
+BU   BU   SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+BUN  BU   SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+BA   BU   SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+BAN  BU   SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+BU   BUC  SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+BA   BUC  SR1  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+!
+SR1  BUN  BU   120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR1  BUN  BA   120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR1  BU   BU   120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR1  BU   BUC  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR1  BU   BAC  120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR1  BU   BA   120.00       2.62      0.0       0.0  ! fit Boltzmann inversion sim UA
+!
+BUN  SR1  SR2  154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+BU   SR1  SR2  154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+BUC  SR1  SR2  154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR2  SR1  BU   154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR2  SR1  BUN  154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+SR2  SR1  BUC  154.00       2.95      0.0       0.0  ! fit Boltzmann inversion sim UA
+!
+! asparagine
+SN   BU   BU   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA (prov)
+SN   BU   BUC  145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+SN   BU   BA   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+SN   BU   BAC  145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+SN   BUN  BU   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+SN   BUN  BA   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BU   BU   SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BUN  BU   SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BA   BU   SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BAN  BU   SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BU   BUC  SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+BA   BUC  SN   145.0       29.629    65.843    36.579 ! fit Boltzmann inversion sim UA
+!
+! aspartate
+SD   BUN  BU   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA (prov)
+SD   BUN  BA   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SD   BU   BU   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SD   BU   BUC  145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SD   BU   BA   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SD   BU   BAC  145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BU   SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BUN  BU   SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BU   SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BAN  BU   SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BUC  SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BUC  SD   145.0       42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+!
+! cysteine
+! 1
+SC1  BUN  BU    143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SC1  BUN  BA    143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SC1  BU   BU    143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SC1  BU   BUC   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SC1  BU   BA    143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+SC1  BU   BAC   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BU   SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BUN  BU   SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BU   SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BAN  BU   SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BUC  SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BUC  SC1   143.0      42.666   113.777    75.851 ! fit Boltzmann inversion sim UA
+! 2
+SC2  BUN  BU  	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+SC2  BUN  BA  	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+SC2  BU	  BU  	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+SC2  BU	  BUC 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+SC2  BU	  BA  	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+SC2  BU	  BAC 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BU	  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BUN  BU	  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BU	  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BAN  BU	  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BU   BUC  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+BA   BUC  SC2 	143.0 	   10.0	    113.777    75.851 ! fit Boltzmann inversion sim UA
+!
+SC2  SC2  BUN  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+SC2  SC2  BU   116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+SC2  SC2  BUC  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+SC1  SC1  BUN  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+SC1  SC1  BU   116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+SC1  SC1  BUC  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BUN  SC2  SC2  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BU   SC2  SC2  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BUC  SC2  SC2  116.0        2.2       0.0       0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BUN  SC1  SC1  116.0  	    2.2	      0.0     	0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BU   SC1  SC1  116.0  	    2.2	      0.0     	0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+BUC  SC1  SC1  116.0  	    2.2	      0.0     	0.0   ! fit Boltzmann inversion sim UA Protein with S-bridge
+!
+! glutamate
+SE   BUN  BU   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+SE   BUN  BA   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+SE   BU   BU   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+SE   BU   BUC  121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+SE   BU   BA   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+SE   BU   BAC  121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SE   121.0        2.53      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! glutamine
+SQ   BUN  BU   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+SQ   BUN  BA   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+SQ   BU   BU   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+SQ   BU   BUC  117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+SQ   BU   BA   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+SQ   BU   BAC  117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SQ   117.0        1.16      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! histidine
+SH1  BUN  BU   116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH1  BUN  BA   116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH1  BU   BU   116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH1  BU   BUC  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH1  BU   BA   116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH1  BU   BAC  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BU   SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SH1  116.0        3.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BUN  SH1  SH2  129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SH1  SH2  129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SH1  SH2  129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SH2  SH1  BUN  129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH2  SH1  BU   129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH2  SH1  BUC  129.0        6.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SH1  SH2  SH2   69.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SH2  SH1  SH2   42.5       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! isoleucine
+SI   BUN  BU   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+SI   BUN  BA   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+SI   BU   BU   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+SI   BU   BUC  113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+SI   BU   BA   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+SI   BU   BAC  113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SI   113.0        8.58      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! leucine
+SL   BUN  BU   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+SL   BUN  BA   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+SL   BU   BU   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+SL   BU   BUC  118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+SL   BU   BA   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+SL   BU   BAC  118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SL   118.0        1.9       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! lysine
+SK1  BUN  BU   120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA 
+SK1  BUN  BA   120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+SK1  BU   BU   120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+SK1  BU   BUC  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+SK1  BU   BA   120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+SK1  BU   BAC  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SK1  120.0        3.14      0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BUN  SK1  SK2  155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SK1  SK2  155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SK1  SK2  155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SK2  SK1  BU   155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SK2  SK1  BUN  155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SK2  SK1  BUC  155.0        3.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! methionine
+SM   BUN  BU   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SM   BUN  BA   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SM   BU   BU   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SM   BU   BUC  117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SM   BU   BA   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SM   BU   BAC  117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BU   SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SM   117.0        1.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! phenylalanine
+SF1  BUN  BU   117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF1  BUN  BA   117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF1  BU   BU   117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF1  BU   BUC  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF1  BU   BA   117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF1  BU   BAC  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BU   SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SF1  117.0        2.3       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BUN  SF1  SF2  128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SF1  SF2  128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SF1  SF2  128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SF2  SF1  BUN  128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF2  SF1  BU   128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF2  SF1  BUC  128.6       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SF1  SF2  SF2   63.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SF2  SF1  SF2   53.0       10.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! proline
+SP   BUN  BU   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+SP   BUN  BA   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+SP   BU   BU   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+SP   BU   BUC  143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+SP   BU   BA   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+SP   BU   BAC  143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BU   BU   SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BUN  BU   SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BA   BU   SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BAN  BU   SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BU   BUC  SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+BA   BUC  SP   143.0      264.462   480.841   218.564 ! fit Boltzmann inversion sim UA
+!
+! serine
+SS   BUN  BU   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+SS   BUN  BA   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+SS   BU   BU   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+SS   BU   BUC  113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA 
+SS   BU   BA   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+SS   BU   BAC  113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SS   113.5        2.7       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! threonine
+ST   BUN  BU   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+ST   BUN  BA   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+ST   BU   BU   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+ST   BU   BUC  112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+ST   BU   BA   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+ST   BU   BAC  112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BU   ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  ST   112.0       14.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! tryptophan
+SW1  BUN  BU   136.0       66.66    222.22    185.185 ! provvisorio
+SW1  BUN  BA   136.0       66.66    222.22    185.185
+SW1  BU   BU   136.0       66.66    222.22    185.185
+SW1  BU   BUC  136.0       66.66    222.22    185.185
+SW1  BU   BA   136.0       66.66    222.22    185.185
+SW1  BU   BAC  136.0       66.66    222.22    185.185
+!
+BU   BU   SW1  136.0       66.66    222.22    185.185
+BUN  BU   SW1  136.0       66.66    222.22    185.185
+BA   BU   SW1  136.0       66.66    222.22    185.185
+BAN  BU   SW1  136.0       66.66    222.22    185.185
+BU   BUC  SW1  136.0       66.66    222.22    185.185
+BA   BUC  SW1  136.0       66.66    222.22    185.185
+!
+BUN  SW1  SW2  130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SW1  SW2  130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SW1  SW2  130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW2  SW1  BUN  130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW2  SW1  BU   130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW2  SW1  BUC  130.0       11.4       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BUN  SW1  SW3  116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SW1  SW3  116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SW1  SW3  116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW1  BUN  116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW1  BU   116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW1  BUC  116.0        7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SW1  SW2  SW3   94.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW2  SW1   94.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SW1  SW3  SW3  106.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW3  SW1  106.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SW2  SW3  SW3   83.4       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW3  SW2   83.4       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SW2  SW1  SW3   76.2       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SW3  SW1  SW2   76.2       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! tyrosine
+SY1  BUN  BU   140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+SY1  BUN  BA   140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+SY1  BU   BU   140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+SY1  BU   BUC  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+SY1  BU   BA   140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+SY1  BU   BAC  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BU   BU   SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BUN  BU   SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BA   BU   SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BAN  BU   SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BU   BUC  SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+BA   BUC  SY1  140.0       53.464   159.594   119.1 ! fit Boltzmann inversion sim UA
+!
+BUN  SY1  SY2  131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   SY1  SY2  131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUC  SY1  SY2  131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SY2  SY1  BUN  131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SY2  SY1  BU   131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SY2  SY1  BUC  131.0       11.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+SY1  SY2  SY2   65.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+SY2  SY1  SY2   46.0       50.0       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+! valine
+SV   BUN  BU    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SV   BUN  BA    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SV   BU   BU    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SV   BU   BUC   119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SV   BU   BA    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+SV   BU   BAC   119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+BU   BU   SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BUN  BU   SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BU   SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BAN  BU   SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BU   BUC  SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+BA   BUC  SV    119.0       7.8       0.0       0.0 ! fit Boltzmann inversion sim UA
+!
+
+DIHEDRALS
+! in this version we are dealing with the charmm class
+! modified by Davide Alemani in Lammps
+!                     k1     k2      k3      theta1   theta2   theta3
+! backbone
+BU   BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10   ! symmetric barrier with a barrier of 8 kcal/mol
+BA   BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BU   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BU   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BU   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BU   BU   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BA   BU     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BA   BUC    0.0    0.0     4.0      0.0      0.0       10
+BUN  BA   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BU   BA   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BU   BA   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BU   BA   BAC    0.0    0.0     4.0      0.0      0.0       10
+BAN  BA   BU   BA     0.0    0.0     4.0      0.0      0.0       10
+BA   BA   BU   BAC    0.0    0.0     4.0      0.0      0.0       10
+
+! side chains
+!
+! arginine
+SR2  SR1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+SR2  SR1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SR2  SR1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+!
+BU   BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BAC  BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUC  SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BUC  SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BUN  SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+BAN  BU   SR1  SR2    0.0    0.0     1.0      0.0      0.0       0.0
+! cysteine
+BU   SC2  SC2  BU     0.0    0.0     2.0      0.0      0.0       0.0
+BU   SC1  SC1  BU     0.0    0.0     2.0      0.0      0.0       0.0
+!
+! histidine
+SH2  SH1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+SH2  SH1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SH2  SH1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BU   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUC  SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BA   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAC  SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BA   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BA   SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAN  SH1  SH2    0.0    0.0     1.0      0.0      0.0       0.0
+!
+! lysine
+SK2  SK1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+SK2  SK1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SK2  SK1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+!
+BU   BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BAC  BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUC  SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BUC  SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BA   BUN  SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+BAN  BU   SK1  SK2    0.0    0.0     1.0      0.0      0.0       0.0
+!
+! phenylalanine
+SF2  SF1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+SF2  SF1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SF2  SF1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BU   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUC  SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BA   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAC  SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BA   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BA   SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAN  SF1  SF2    0.0    0.0     1.0      0.0      0.0       0.0
+!
+! tryptophan
+SW3  SW1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+SW3  SW1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SW3  SW1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BU   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUC  SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BA   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAC  SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BA   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BA   SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAN  SW1  SW3    0.0    0.0     1.0      0.0      0.0       0.0
+!
+! tyrosine
+BU   BU   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0 ! provvisorio
+BU   BUC  SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BA   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAC  SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BU   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BUC  BA   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BU   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BUN  BA   SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BUN  SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+BU   BAN  SY1  SY2    0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BU     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BUC    0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BA     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BAC    0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BUC  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BUC  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BUN  BU     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BUN  BA     0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BUN    0.0    0.0     1.0      0.0      0.0       0.0
+SY2  SY1  BU   BAN    0.0    0.0     1.0      0.0      0.0       0.0
+
+IMPROPER
+!
+!atom types             Ktheta2   Ktheta3   Ktheta4   phi0
+X    BU   X    SR1      1.3       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SN       2.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SD       1.6       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SC1      1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SC2      1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SE       1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    SQ       1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SH1      1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+BUN  SH2  SH2  SH1     55.36    162.82    119.72        20 ! fit Boltzmann inversion sim UA
+BU   SH2  SH2  SH1     55.36    162.82    119.72        20 ! fit Boltzmann inversion sim UA
+BUC  SH2  SH2  SH1     55.36    162.82    119.72        20 ! fit Boltzmann inversion sim UA
+X    BU   X    SI       1.6       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    SL       4.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    SK1      1.4       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+X    BU   X    SM       1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    SF1     29.0       0.0       0.0        180
+BUN  SF2  SF2  SF1     75.42    215.5     153.92        20
+BU   SF2  SF2  SF1     75.42    215.5     153.92        20
+BUC  SF2  SF2  SF1     75.42    215.5     153.92        20
+X    BU   X    SP       4.0       0.0       0.0         82 ! fit Boltzmann inversion sim UA
+X    BU   X    SS       1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    ST       1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+X    BU   X    SW1      1.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA
+SW1  SW2  SW3  SW3     40.0       0.0       0.0          0 ! fit Boltzmann inversion sim UA
+BUN  SW2  SW3  SW1     40.0     100.0      62.5         23 ! fit Boltzmann inversion sim UA
+BU   SW2  SW3  SW1     40.0     100.0      62.5         23 ! fit Boltzmann inversion sim UA
+BUC  SW2  SW3  SW1     40.0     100.0      62.5         23 ! fit Boltzmann inversion sim UA
+X    BU   X    SY1      2.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+BUN  SY2  SY2  SY1     71.0     197.0     136.86        20 ! fit Boltzmann inversion sim UA 
+BU   SY2  SY2  SY1     71.0     197.0     136.86        20 ! fit Boltzmann inversion sim UA 
+BUC  SY2  SY2  SY1     71.0     197.0     136.86        20 ! fit Boltzmann inversion sim UA 
+X    BU   X    SV       2.0       0.0       0.0        180 ! fit Boltzmann inversion sim UA 
+
+NONBONDED
+!atom  ignored    epsilon      sigma
+BAN    0.0        1.3          4.5
+BA     0.0        1.3          4.5
+BAC    0.0        1.3          4.5
+BUN    0.0        1.3          4.5
+BU     0.0        1.3          4.5
+BUC    0.0        1.3          4.5
+SR1    0.0        1.3          4.5
+SR2    0.0        1.3          4.5
+SN     0.0        1.3          4.5
+SD     0.0        1.3          4.5
+SC1    0.0        1.3          4.5
+SC2    0.0        1.3          4.5
+SE     0.0        1.3          4.5
+SQ     0.0        1.3          4.5
+SH1    0.0        1.3          4.5
+SH2    0.0        1.3          4.5
+SI     0.0        1.3          4.5
+SL     0.0        1.3          4.5
+SK1    0.0        1.3          4.5
+SK2    0.0        1.3          4.5
+SM     0.0        1.3          4.5
+SF1    0.0        1.3          4.5
+SF2    0.0        1.3          4.5
+SP     0.0        1.3          4.5
+SS     0.0        1.3          4.5
+ST     0.0        1.3          4.5
+SW1    0.0        1.3          4.5
+SW2    0.0        1.3          4.5
+SW3    0.0        1.3          4.5
+SY1    0.0        1.3          4.5
+SY2    0.0        1.3          4.5
+SV     0.0        1.3          4.5
+
+ELLIPSOID
+!atom  sx		sy		sz		q0		q1		q2		q3      
+SN     1.0		1.0		1.0		0.0		0.0		0.0		0.0
+SQ     1.0		1.0		1.0		0.0		0.0		0.0		0.0
+SS     1.0		1.0		1.0		0.0		0.0		0.0		0.0
+ST     1.0		1.0		1.0		0.0		0.0		0.0		0.0
+SW2    1.0		1.0		1.0		0.0		0.0		0.0		0.0
+SY2    1.0		1.0		1.0		0.0		0.0		0.0		0.0
+
+DIPOLE
+!atom	dx		dy		dz
+SN     1.0		1.0		1.0
+SQ     1.0		1.0		1.0
+SS     1.0		1.0		1.0
+ST     1.0		1.0		1.0
+SW2    1.0		1.0		1.0
+SY2    1.0		1.0		1.0
+END   
+END       

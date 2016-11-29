@@ -1,0 +1,337 @@
+BONDS
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!atom type Kb          b0
+!
+!Carbon Dioxide
+CST  OST   937.96      1.1600 ! JES
+!Heme to Sulfate (PSUL) link
+SS   FE    250.0       2.3200 !force constant a guess
+           !equilbrium bond length optimized to reproduce 
+           !CSD survey values of
+           !2.341pm0.01 (mean, standard error)
+           !adm jr., 7/01
+C    C     600.000     1.3350 ! ALLOW ARO HEM
+                ! Heme vinyl substituent (KK, from propene (JCS))
+CA   CA    305.000     1.3750 ! ALLOW   ARO
+                ! benzene, JES 8/25/89
+CE1  CE1   440.000     1.3400   ! 
+		! for butene; from propene, yin/adm jr., 12/95
+CE1  CE2   500.000     1.3420   ! 
+		! for propene, yin/adm jr., 12/95
+CE1  CT2   365.000     1.5020   ! 
+		! for butene; from propene, yin/adm jr., 12/95
+CE1  CT3   383.000     1.5040   ! 
+		! for butene, yin/adm jr., 12/95
+CE2  CE2   510.000     1.3300   ! 
+		! for ethene, yin/adm jr., 12/95
+CP1  C     250.000     1.4900 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CP1  CC    250.000     1.4900 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CP1  CD    200.000     1.4900 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CP2  CP1   222.500     1.5270 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CP2  CP2   222.500     1.5370 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CP3  CP2   222.500     1.5370 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+CPB  CE1   450.000     1.3800 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+CPB  CPA   299.800     1.4432 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+CPB  CPB   340.700     1.3464 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+CPH1 CPH1  410.000     1.3600 ! ALLOW ARO
+                ! histidine, adm jr., 6/27/90
+CPM  CPA   360.000     1.3716 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+CPT  CA    305.000     1.3680 ! ALLOW   ARO
+                ! adm jr., 12/30/91, for jwk
+CPT  CPT   360.000     1.4000 ! ALLOW   ARO
+                !adm jr., 12/30/91, for jwk
+CT1  C     250.000     1.4900 ! ALLOW   ALI PEP POL ARO
+                ! Ala Dipeptide ab initio calc's (LK) fixed from 10/90 (5/91)
+CT1  CC    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 4/05/91, for asn,asp,gln,glu and cters
+CT1  CD    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 5/02/91, acetic acid pure solvent
+CT1  CT1   222.500     1.5000 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CT2  C     250.000     1.4900 ! ALLOW   ALI PEP POL ARO
+                ! Ala Dipeptide ab initio calc's (LK) fixed from 10/90 (5/91)
+CT2  CA    230.000     1.4900 ! ALLOW   ALI ARO
+                ! phe,tyr, JES 8/25/89
+CT2  CC    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 4/05/91, for asn,asp,gln,glu and cters
+CT2  CD    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 5/02/91, acetic acid pure solvent
+CT2  CPB   230.000     1.4900 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+CT2  CPH1  229.630     1.5000 ! ALLOW ARO
+                ! his, adm jr., 7/22/89, FC from CT2CT, BL from crystals
+CT2  CT1   222.500     1.5380 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CT2  CT2   222.500     1.5300 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CT3  C     250.000     1.4900 ! ALLOW   ALI PEP POL ARO
+                ! Ala Dipeptide ab initio calc's (LK) fixed from 10/90 (5/91)
+CT3  CA    230.000     1.4900 ! ALLOW   ALI ARO
+                ! toluene, adm jr. 3/7/92
+CT3  CC    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 4/05/91, for asn,asp,gln,glu and cters
+CT3  CD    200.000     1.5220 ! ALLOW   POL
+                ! adm jr. 5/02/91, acetic acid pure solvent
+CT3  CPB   230.000     1.4900 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+CT3  CPH1  229.630     1.5000 ! ALLOW ARO
+                ! his, adm jr., 7/22/89, FC from CT2CT, BL from crystals
+CT3  CS    190.000     1.5310 ! ALLOW   SUL
+                ! ethylthiolate 6-31+G* geom/freq, adm jr., 6/1/92
+CT3  CT1   222.500     1.5380 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CT3  CT2   222.500     1.5280 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CT3  CT3   222.500     1.5300 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CY   CA    350.000     1.3650 ! ALLOW   ARO
+                !adm jr., 5/08/91, indole CCDB structure search
+CY   CPT   350.000     1.4400 ! ALLOW   ARO
+                !adm jr., 12/30/91, for jwk
+CY   CT2   230.000     1.5100 ! ALLOW ARO
+                !JWK  Kb from alkane freq.. b0 from TRP crystal
+FE   CM    258.000     1.9000 ! ALLOW HEM
+                ! Heme (6-liganded): CO ligand (KK 05/13/91)
+FE   CPM     0.000     3.3814 ! ALLOW HEM
+                ! Heme (6-liganded): for "ic para" only (KK 05/13/91)
+H    CD    330.000     1.1100 ! ALLOW   PEP POL ARO
+                ! adm jr. 5/02/91, acetic acid pure solvent
+!HA   C     330.000     1.1000 ! ALLOW ARO HEM
+                ! Heme vinyl substituent (KK, from propene (JCS))
+HA   CA    340.000     1.0830 ! ALLOW ARO
+                ! trp, adm jr., 10/02/89
+HA   CC    317.130     1.1000 ! ALLOW POL
+                ! adm jr., 5/13/91, formamide geometry and vibrations
+HA   CP2   309.000     1.1110 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+HA   CP3   309.000     1.1110 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+HA   CPM   367.600     1.0900 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+HA   CS    300.000     1.1110 ! ALLOW   SUL
+                ! methylthiolate 6-31+G* geom/freq, adm jr., 6/1/92
+HA   CT1   309.000     1.1110 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+HA   CT2   309.000     1.1110 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+HA   CT3   322.000     1.1110 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+HA   CY    330.000     1.0800 ! ALLOW   ARO
+                ! JWK 05/14/91 new r0 from indole
+HE1  CE1   360.500     1.1000   ! 
+		! for propene, yin/adm jr., 12/95
+HE2  CE2   365.000     1.1000   ! 
+		! for ethene, yin/adm jr., 12/95
+HB   CP1   330.000     1.0800 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+HB   CT1   330.000     1.0800 ! ALLOW   PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+HB   CT2   330.000     1.0800 ! ALLOW   PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+HB   CT3   330.000     1.0800 ! ALLOW   PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+HP   CA    340.000     1.0800 ! ALLOW   ARO
+                ! phe,tyr JES 8/25/89
+HP   CY    350.000     1.0800 ! ALLOW   ARO
+                !adm jr., 12/30/91, for jwk
+HR1  CPH1  375.000     1.0830 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+HR1  CPH2  340.000     1.0900 ! ALLOW ARO
+                ! his, adm jr., 6/28/29
+HR2  CPH2  333.000     1.0700 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+HR3  CPH1  365.000     1.0830 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+HT   HT      0.000     1.5139 ! ALLOW WAT
+                ! FROM TIPS3P GEOMETRY (FOR SHAKE/W PARAM)
+N    C     260.000     1.3000 ! ALLOW PEP POL ARO PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+N    CP1   320.000     1.4340 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+N    CP3   320.000     1.4550 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+NC2  C     463.000     1.3650 ! ALLOW   PEP POL ARO
+                ! 403.0->463.0, 1.305->1.365 guanidinium (KK)
+NC2  CT2   261.000     1.4900 ! ALLOW   ALI POL
+                ! arg, (DS)
+NC2  CT3   261.000     1.4900 ! ALLOW   ALI POL
+                ! methylguanidinium, adm jr., 3/26/92
+NC2  HC    455.000     1.0000 ! ALLOW   POL
+                ! 405.0->455.0 GUANIDINIUM (KK)
+NH1  C     370.000     1.3450 ! ALLOW   PEP POL ARO
+                ! Alanine Dipeptide ab initio calc's (LK)
+NH1  CT1   320.000     1.4300 ! ALLOW   ALI PEP POL ARO
+                ! NMA Gas & Liquid Phase IR Spectra (LK)
+NH1  CT2   320.000     1.4300 ! ALLOW   ALI PEP POL ARO
+                ! NMA Gas & Liquid Phase IR Spectra (LK)
+NH1  CT3   320.000     1.4300 ! ALLOW   ALI PEP POL ARO
+                ! NMA Gas & Liquid Phase IR Spectra (LK)
+NH1  H     440.000     0.9970 ! ALLOW   PEP POL ARO
+                ! Alanine Dipeptide ab initio calc's (LK)
+NH1  HC    405.000     0.9800 ! ALLOW   PEP POL ARO
+                ! (DS)
+NH2  CC    430.000     1.3600 ! ALLOW   PEP POL ARO
+                ! adm jr. 4/10/91, acetamide
+NH2  CT2   240.000     1.4550
+                ! from NH2  CT3, neutral glycine, adm jr.
+NH2  CT3   240.000     1.4550 ! ALLOW   POL
+                ! methylamine geom/freq, adm jr., 6/2/92
+NH2  H     480.000     1.0000 ! ALLOW   POL
+                ! adm jr. 8/13/90 acetamide geometry and vibrations
+NH2  HC    460.000     1.0000 ! ALLOW   POL
+                ! methylamine geom/freq, adm jr., 6/2/92
+NH3  CT1   200.000     1.4800 ! ALLOW   ALI POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+NH3  CT2   200.000     1.4800 ! ALLOW   ALI POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+NH3  CT3   200.000     1.4800 ! ALLOW   ALI POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+NH3  HC    403.000     1.0400 ! ALLOW   POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+NP   CP1   320.000     1.4850 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+NP   CP3   320.000     1.5020 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+NP   HC    460.000     1.0060 ! ALLOW PRO
+                ! 6-31g* AcProNH2, ProNH2, 6-31g*//3-21g AcProNHCH3 RLD 4/23/93
+NPH  CPA   377.200     1.3757 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NPH  FE    270.200     1.9580 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NR1  CPH1  400.000     1.3800 ! ALLOW ARO
+                ! his, ADM JR., 7/20/89
+NR1  CPH2  400.000     1.3600 ! ALLOW ARO
+                ! his, ADM JR., 7/20/89
+NR1  H     466.000     1.0000 ! ALLOW ARO
+                ! his, ADM JR., 7/20/89
+NR2  CPH1  400.000     1.3800 ! ALLOW ARO
+                ! his, ADM JR., 7/20/89
+NR2  CPH2  400.000     1.3200 ! ALLOW ARO
+                ! his, ADM JR., 7/20/89
+NR2  FE     65.000     2.2000 ! ALLOW HEM
+                ! Heme (6-liganded): His ligand (KK 05/13/91)
+NR3  CPH1  380.000     1.3700 ! ALLOW ARO
+                ! his, adm jr., 6/28/90
+NR3  CPH2  380.000     1.3200 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+NR3  H     453.000     1.0000 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+NY   CA    270.000     1.3700 ! ALLOW   ARO
+                !adm jr., 12/30/91, for jwk
+NY   CPT   270.000     1.3750 ! ALLOW   ARO
+                !adm jr., 12/30/91, for jwk
+NY   H     465.000     0.9760 ! ALLOW   ARO
+                ! indole JWK   08/28/89
+O    C     620.000     1.2300 ! ALLOW   PEP POL ARO
+                ! Peptide geometry, condensed phase (LK)
+O    CC    650.000     1.2300 ! ALLOW   PEP POL ARO
+                ! adm jr. 4/10/91, acetamide
+OB   CC    750.000     1.2200 ! ALLOW   PEP POL ARO
+                ! adm jr., 10/17/90, acetic acid vibrations and geom.
+OB   CD    750.000     1.2200 ! ALLOW   PEP POL ARO
+                ! adm jr. 5/02/91, acetic acid pure solvent
+OC   CA    525.000     1.2600 ! ALLOW   PEP POL ARO ION
+                ! adm jr. 8/27/91, phenoxide
+OC   CC    525.000     1.2600 ! ALLOW   PEP POL ARO ION
+                ! adm jr. 7/23/91, acetic acid
+OC   CT2   450.000     1.3300 ! ALLOW   ALC
+                ! ethoxide 6-31+G* geom/freq, adm jr., 6/1/92
+OC   CT3   450.000     1.3300 ! ALLOW   ALC
+                ! methoxide 6-31+G* geom/freq, adm jr., 6/1/92
+OH1  CA    334.300     1.4110 ! ALLOW   ARO ALC
+                ! MeOH, EMB 10/10/89,
+OH1  CD    230.000     1.4000 ! ALLOW   PEP POL ARO ALC
+                ! adm jr. 5/02/91, acetic acid pure solvent
+OH1  CT1   428.000     1.4200 ! ALLOW   ALI ALC ARO
+                ! methanol vib fit EMB 11/21/89
+OH1  CT2   428.000     1.4200 ! ALLOW   ALI ALC ARO
+                ! methanol vib fit EMB 11/21/89
+OH1  CT3   428.000     1.4200 ! ALLOW   ALI ALC ARO
+                ! methanol vib fit EMB 11/21/89
+OH1  H     545.000     0.9600 ! ALLOW   ALC ARO
+                ! EMB 11/21/89 methanol vib fit
+OM   CM   1115.000     1.1280 ! ALLOW HEM
+                ! Heme (6-liganded): CO ligand (KK 05/13/91)
+OM   FE    250.000     1.8000 ! ALLOW HEM
+                ! Heme (6-liganded): O2 ligand (KK 05/13/91)
+OM   OM    600.000     1.2300 ! ALLOW HEM
+                ! Heme (6-liganded): O2 ligand (KK 05/13/91)
+OS   CD    150.000     1.3340 ! ALLOW POL PEP
+                ! adm jr. 5/02/91, acetic acid pure solvent
+OS   CT3   340.000     1.4300 ! ALLOW POL PEP
+                ! adm jr., 4/05/91, for PRES CT1 from methylacetate
+OT   HT    450.000     0.9572 ! ALLOW   WAT
+                ! FROM TIPS3P GEOM
+S    CT2   198.000     1.8180 ! ALLOW   ALI SUL ION
+                ! fitted to C-S s   9/26/92 (FL)
+S    CT3   240.000     1.8160 ! ALLOW   ALI SUL ION
+                ! fitted to C-S s   9/26/92 (FL)
+S    HS    275.000     1.3250 ! ALLOW   SUL ION
+                ! methanethiol pure solvent, adm jr., 6/22/92
+SM   CT2   214.000     1.8160 ! ALLOW   SUL ION
+                ! improved CSSC dihedral in DMDS  5/15/92 (FL)
+SM   CT3   214.000     1.8160 ! ALLOW   SUL ION
+                ! improved CSSC dihedral in DMDS  5/15/92 (FL)
+SM   SM    173.000     2.0290 ! ALLOW   SUL ION
+                ! improved CSSC dihedral in DMDS  5/15/92 (FL)
+SS   CS    205.000     1.8360 ! ALLOW   SUL
+                ! methylthiolate 6-31+G* geom/freq, adm jr., 6/1/92
+!lipid section
+CTL3  CL    200.0       1.522   ! methyl acetate
+CTL2  CL    200.0       1.522   ! methyl acetate
+CTL1  CL    200.0       1.522   ! methyl acetate
+OBL   CL    750.0       1.220   ! methyl acetate
+OCL   CL    525.0       1.260   ! acetate, protein
+OSL   CL    150.0       1.334   ! methyl acetate
+OHL   CL    230.0       1.40    ! methyl acetate
+HOL   OHL   545.0       0.960   ! acetic acid
+CTL1  HAL1  309.00      1.111   ! alkanes, 3/92
+CTL2  HAL2  309.00      1.111   ! alkanes, 4/98
+CTL3  HAL3  322.00      1.111   ! alkanes, 4/98
+CTL3  OSL   340.0       1.43    ! phosphate
+CTL2  OSL   340.0       1.43    ! phosphate
+CTL1  OSL   340.0       1.43    ! phosphate
+OSL   PL    270.0       1.60    ! phosphate
+O2L   PL    580.0       1.48    ! phosphate
+OHL   PL    237.0       1.59    ! phosphate
+NH3L  HCL   410.0       1.04    ! ethanolamine
+NH3L  CTL2  261.0       1.51    ! ethanolamine
+NTL   CTL2  215.00      1.51    ! tetramethylammonium
+NTL   CTL5  215.00      1.51    ! tetramethylammonium
+CTL5  HL    300.00      1.08    ! tetramethylammonium
+CTL2  HL    300.00      1.08    ! tetramethylammonium
+CTL1  CTL1  222.500     1.500   ! alkanes, 3/92
+CTL1  CTL2  222.500     1.538   ! alkanes, 3/92
+CTL1  CTL3  222.500     1.538   ! alkanes, 3/92
+CTL2  CTL2  222.500     1.530   ! alkanes, 3/92
+CTL2  CTL3  222.500     1.528   ! alkanes, 3/92
+CTL3  CTL3  222.500     1.530   ! alkanes, 3/92
+OHL   CTL1  428.0       1.420   !  glycerol
+OHL   CTL2  428.0       1.420   !  glycerol
+OHL   CTL3  428.0       1.420   !  glycerol
+SL    O2L   540.0       1.448   ! methylsulfate
+SL    OSL   250.0       1.575   ! methylsulfate
+!HT    HT      0.0       1.5139  ! from TIPS3P geometry (for SHAKE w/PARAM)
+!HT    OT    450.0       0.9572  ! from TIPS3P geometry
+CEL2  CEL2  510.000     1.330   ! ethene yin,adm jr., 12/95
+HEL2  CEL2  365.000     1.100   ! propene; from ethene, yin,adm jr., 12/95
+CEL1  CTL3  383.000     1.504   ! butene, yin,adm jr., 12/95
+CEL1  CEL2  500.000     1.342   ! propene, yin,adm jr., 12/95
+HEL1  CEL1  360.500     1.100   ! propene, yin,adm jr., 12/95
+CEL1  CTL2  365.000     1.502   ! butene; from propene, yin,adm jr., 12/95
+CEL1  CEL1  440.000     1.340   ! butene, yin,adm jr., 12/95
